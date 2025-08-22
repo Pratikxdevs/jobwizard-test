@@ -1,0 +1,90 @@
+<!-- /frontend/pages/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Dashboard</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <!-- Main application layout -->
+    <div class="app-layout">
+        <!-- Sidebar is dynamically loaded into this placeholder -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- Navbar is dynamically loaded into this placeholder -->
+        <div id="navbar-placeholder"></div>
+
+        <!-- Main page content for the dashboard -->
+        <main class="main-content">
+            <h1>Dashboard</h1>
+            <div class="dashboard-grid">
+                <!-- Left Column: Profile Summary -->
+                <aside class="dashboard-panel profile-summary">
+                    <div class="panel-card">
+                        <div class="profile-header">
+                            <img src="https://i.pravatar.cc/80?u=jobwizarduser" alt="User Avatar" class="profile-avatar-large">
+                            <h3>John Doe</h3>
+                            <p class="user-title">Software Engineer</p>
+                            <p class="user-location">San Francisco, CA</p>
+                        </div>
+                        <div class="profile-skills">
+                            <h4>Skills</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">CSS Grid</span>
+                                <span class="skill-tag">Next.js</span>
+                            </div>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn btn-secondary btn-block">Preview Resume</button>
+                            <a href="profile.html" class="btn btn-primary btn-block">Edit Profile</a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Middle Column: Jobs Section -->
+                <section class="dashboard-panel jobs-section">
+                     <div class="panel-card">
+                        <h2>Start Your Job Search</h2>
+                        <p>Explore thousands of jobs tailored to your profile and skills.</p>
+                        <div class="illustration-placeholder">
+                            <span>🚀</span>
+                        </div>
+                        <a href="jobs.html" class="btn btn-primary btn-block">Explore Jobs</a>
+                    </div>
+                </section>
+
+                <!-- Right Column: Widgets -->
+                <aside class="dashboard-panel widgets">
+                    <div class="panel-card widget-card">
+                        <h4>Application Stats</h4>
+                        <div class="graph-placeholder">[Graph Placeholder]</div>
+                    </div>
+                    <div class="panel-card widget-card">
+                        <h4>Saved Jobs</h4>
+                        <ul class="widget-list">
+                            <li>Senior Frontend Developer @ Google</li>
+                            <li>Full-Stack Engineer @ Meta</li>
+                            <li><a href="saved.html">View all...</a></li>
+                        </ul>
+                    </div>
+                     <div class="panel-card widget-card">
+                        <h4>Applied This Week</h4>
+                        <p class="applied-count">5</p>
+                        <p class="widget-subtitle">applications sent</p>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <!-- Main script to load components -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

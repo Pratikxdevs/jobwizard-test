@@ -1,0 +1,275 @@
+/* /frontend/css/components.css */
+/* This file contains styles for shared components like the navbar and sidebar. */
+
+/* ------------------ */
+/* App Layout         */
+/* ------------------ */
+/* This is the main wrapper for authenticated pages. */
+.app-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Sidebar width and the rest */
+    grid-template-rows: 70px 1fr;     /* Navbar height and the rest */
+    grid-template-areas:
+        "sidebar navbar"
+        "sidebar main";
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar { grid-area: sidebar; }
+.navbar { grid-area: navbar; }
+
+/* This will wrap the actual page content. */
+.main-content {
+    grid-area: main;
+    overflow-y: auto; /* Allow content to scroll */
+    padding: 2rem;
+    background-color: var(--black);
+}
+
+
+/* ------------------ */
+/*      Navbar        */
+/* ------------------ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: var(--background-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+.navbar-logo:hover { text-decoration: none; }
+
+.search-bar { position: relative; }
+.search-bar input {
+    width: 300px;
+    padding: 10px 15px 10px 40px; /* Space for icon */
+    background-color: var(--jet);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-family: var(--font-primary);
+}
+.search-bar .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+}
+
+.notification-bell { position: relative; color: var(--text-light); }
+.notification-bell .bell-icon { font-size: 1.5rem; }
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #E53E3E;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--background-light);
+}
+
+.profile-dropdown { position: relative; cursor: pointer; }
+.profile-avatar { width: 40px; height: 40px; border-radius: 50%; }
+
+.profile-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background-color: var(--eerie-black);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.profile-dropdown:hover .dropdown-content { display: block; }
+
+.dropdown-header { padding: 1rem; border-bottom: 1px solid var(--border-color); }
+.dropdown-header .username { margin: 0; font-weight: 600; }
+.dropdown-header .email { margin: 0; font-size: 0.875rem; color: var(--text-muted); }
+
+.dropdown-content a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-light);
+}
+.dropdown-content a:hover { background-color: var(--jet); text-decoration: none; }
+.dropdown-divider { height: 1px; background-color: var(--border-color); margin: 0.5rem 0; }
+
+
+/* ------------------ */
+/*      Sidebar       */
+/* ------------------ */
+.sidebar {
+    background-color: var(--background-light);
+    padding: 1.5rem 1rem;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav ul { list-style: none; }
+
+.sidebar-heading {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    padding: 1.5rem 0.75rem 0.5rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: var(--jet);
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.sidebar-link.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+.sidebar-link.active .sidebar-icon {
+    color: var(--text-light);
+}
+
+.sidebar-icon {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+    width: 24px;
+    text-align: center;
+    color: var(--gray);
+    transition: color 0.2s;
+}
+.sidebar-link:hover .sidebar-icon {
+    color: var(--text-light);
+}
+
+
+/* ------------------ */
+/*      Job Card      */
+/* ------------------ */
+
+.job-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.job-card:hover {
+    border-color: var(--davys-gray);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.job-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: contain;
+    background-color: white; /* To see logos with transparent backgrounds */
+    border: 1px solid var(--border-color);
+}
+
+.job-card-title-group .job-title {
+    margin: 0;
+    font-size: 1.125rem;
+}
+.job-card-title-group .job-title a {
+    color: var(--text-light);
+}
+.job-card-title-group .job-title a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.job-card-title-group .company-name,
+.job-card-title-group .job-location {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.job-card-body {
+    padding: 1rem 0;
+}
+
+.job-description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.job-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.job-tags .tag {
+    background-color: var(--jet);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.job-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+}
