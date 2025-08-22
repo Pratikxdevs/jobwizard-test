@@ -1,0 +1,73 @@
+<!-- /frontend/pages/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Sign Up</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <!-- Main container for the split layout -->
+    <div class="split-layout">
+
+        <!-- Left side: Form Card (35%) -->
+        <div class="split-layout-left">
+            <div class="auth-card">
+                <h2>Create an Account</h2>
+                <p>Start your journey with Job Wizard today.</p>
+
+                <form id="signup-form" action="../dashboard.html" method="get"> <!-- Placeholder action -->
+                    <!-- Username Input -->
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="e.g., jobseeker123" required>
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@company.com" required>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                </form>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <!-- OAuth Button -->
+                <button class="btn btn-oauth btn-block">
+                    <img src="../assets/google-icon.svg" alt="Google icon">
+                    Continue with Google
+                </button>
+
+                <!-- Login Link -->
+                <div class="auth-link">
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side: Branding (65%) -->
+        <div class="split-layout-right">
+            <div class="branding-content">
+                <h1>Job Wizard</h1>
+                <p>Your AI-powered job search, simplified.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

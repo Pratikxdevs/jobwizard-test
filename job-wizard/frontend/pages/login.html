@@ -1,0 +1,75 @@
+<!-- /frontend/pages/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Login</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <!-- Main container for the split layout -->
+    <div class="split-layout">
+
+        <!-- Left side: Form Card (35%) -->
+        <div class="split-layout-left">
+            <div class="auth-card">
+                <h2>Log In to Job Wizard</h2>
+                <p>Welcome back! Please enter your details.</p>
+
+                <form id="login-form" action="../dashboard.html" method="get"> <!-- Placeholder action -->
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@company.com" required>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" placeholder="••••••••" required>
+                            <!-- Eye icon will be handled by auth.js -->
+                            <img src="../assets/eye-icon.svg" class="password-toggle-icon" alt="Toggle password visibility">
+                        </div>
+                        <div style="text-align: right; margin-top: 0.5rem;">
+                            <a href="forgot-password.html" class="forgot-password-link">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                </form>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <!-- OAuth Button -->
+                <button class="btn btn-oauth btn-block">
+                    <img src="../assets/google-icon.svg" alt="Google icon">
+                    Continue with Google
+                </button>
+
+                <!-- Signup Link -->
+                <div class="auth-link">
+                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side: Branding (65%) -->
+        <div class="split-layout-right">
+            <!-- This area will be styled with a background color or image via CSS -->
+            <div class="branding-content">
+                <h1>Job Wizard</h1>
+                <p>Your AI-powered job search, simplified.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

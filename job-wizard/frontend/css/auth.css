@@ -1,0 +1,236 @@
+/* /frontend/css/auth.css */
+
+/* ------------------ */
+/*  Layout Containers */
+/* ------------------ */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.split-layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-dark);
+}
+
+.split-layout-left {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.split-layout-right {
+    flex-basis: 65%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.branding-content {
+    text-align: center;
+    color: var(--text-light);
+}
+
+.branding-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.branding-content p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+/* Specific overrides for forgot password page */
+.forgot-password-form {
+    flex-basis: 30%;
+}
+
+.forgot-password-branding {
+    flex-basis: 70%;
+}
+
+
+/* ------------------ */
+/*    Auth Card       */
+/* ------------------ */
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem;
+    background-color: var(--background-light);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.auth-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.auth-card > p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+/* ------------------ */
+/*   Form Elements    */
+/* ------------------ */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--jet);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-family: var(--font-primary);
+}
+
+.form-group input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    filter: grayscale(1) brightness(1.5);
+}
+
+.forgot-password-link {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.auth-link p {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+
+/* ------------------ */
+/*      Dividers      */
+/* ------------------ */
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.divider span {
+    padding: 0 1rem;
+}
+
+
+/* ------------------ */
+/*    OAuth Button    */
+/* ------------------ */
+
+.btn-oauth {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-oauth:hover {
+    background-color: var(--jet);
+    border-color: var(--davys-gray);
+}
+
+.btn-oauth img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ------------------ */
+/*   Responsive Design  */
+/* ------------------ */
+
+@media (max-width: 840px) {
+    .split-layout {
+        flex-direction: column;
+    }
+
+    .split-layout-left, .split-layout-right {
+        flex-basis: auto;
+    }
+
+    .split-layout-right {
+        display: none; /* Hide branding on mobile for forms */
+    }
+
+    .split-layout-left {
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    /* Center the forgot password card on mobile */
+    .auth-container .split-layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
