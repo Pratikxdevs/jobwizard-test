@@ -1,0 +1,128 @@
+/* /frontend/css/jobs.css */
+
+.jobs-layout {
+    display: grid;
+    /* Define a flexible 3-column layout */
+    grid-template-columns: 280px 1fr 280px;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* -- Left Panel: Filters -- */
+.filters-panel .panel-card {
+    /* Make the panel stick to the top when scrolling */
+    position: sticky;
+    top: 2rem;
+}
+
+.filters-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.filters-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.filters-form input,
+.filters-form select {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--jet);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-family: var(--font-primary);
+}
+
+.toggle-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.toggle-group button {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.toggle-group button:hover {
+    background-color: var(--jet);
+}
+
+.toggle-group button.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+
+/* -- Center Panel: Job List -- */
+.job-list-header {
+    margin-bottom: 1.5rem;
+}
+
+.job-list-header h2 {
+    font-size: 1.75rem;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* -- Right Panel: AI Search -- */
+.ai-search-panel .panel-card {
+    position: sticky;
+    top: 2rem;
+}
+
+.ai-search-panel p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0.5rem 0 1rem;
+}
+
+.ai-search-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    background-color: var(--jet);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-family: var(--font-primary);
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+/* -- Responsive Adjustments -- */
+@media (max-width: 1200px) {
+    .jobs-layout {
+        /* On smaller screens, hide the right panel and give more space to the list */
+        grid-template-columns: 280px 1fr;
+    }
+    .ai-search-panel {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .jobs-layout {
+        /* On even smaller screens, stack the filters and list */
+        grid-template-columns: 1fr;
+    }
+    .filters-panel .panel-card {
+        /* Un-stick the panel when it's in the main flow */
+        position: static;
+    }
+}

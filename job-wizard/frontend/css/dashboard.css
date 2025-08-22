@@ -1,0 +1,170 @@
+/* /frontend/css/dashboard.css */
+
+.main-content h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px; /* 3-column layout */
+    gap: 2rem;
+}
+
+.dashboard-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.panel-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+/* Profile Summary Panel */
+.profile-summary .profile-header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-avatar-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+.profile-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.profile-header .user-title,
+.profile-header .user-location {
+    color: var(--text-muted);
+    margin: 0.25rem 0 0;
+}
+
+.profile-skills h4 {
+    margin-bottom: 1rem;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background-color: var(--jet);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+}
+
+.profile-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Jobs Section Panel */
+.jobs-section .panel-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.illustration-placeholder {
+    height: 200px;
+    background: var(--jet);
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+/* Widgets Panel */
+.widget-card h4 {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.widget-list {
+    list-style: none;
+    color: var(--text-muted);
+}
+.widget-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.widget-list li:last-child {
+    border-bottom: none;
+    padding-top: 0.75rem;
+}
+
+.graph-placeholder {
+    height: 150px;
+    background: var(--jet);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+}
+
+.applied-count {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-color);
+    line-height: 1;
+}
+.widget-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+        grid-template-areas:
+            "profile jobs"
+            "widgets widgets";
+    }
+    .profile-summary { grid-area: profile; }
+    .jobs-section { grid-area: jobs; }
+    .widgets {
+        grid-area: widgets;
+        flex-direction: row;
+    }
+    .widgets .panel-card {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* 1 column */
+        grid-template-areas:
+            "profile"
+            "jobs"
+            "widgets";
+    }
+     .widgets {
+        flex-direction: column;
+    }
+}

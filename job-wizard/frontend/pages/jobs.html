@@ -1,0 +1,71 @@
+<!-- /frontend/pages/jobs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Job Listings</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/jobs.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar is dynamically loaded -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- Navbar is dynamically loaded -->
+        <div id="navbar-placeholder"></div>
+
+        <!-- Main page content -->
+        <main class="main-content">
+            <div class="jobs-layout">
+                <!-- Left Panel: Filters -->
+                <aside class="filters-panel">
+                    <div class="panel-card">
+                        <h3>Filters</h3>
+                        <form class="filters-form">
+                            <div class="form-group"><label for="keyword">Keyword</label><input type="text" id="keyword" placeholder="Job title or skill"></div>
+                            <div class="form-group"><label for="location">Location</label><input type="text" id="location" placeholder="City, state, remote"></div>
+                            <div class="form-group"><label>Job Type</label><div class="toggle-group"><button class="active">Full-time</button><button>Part-time</button><button>Contract</button></div></div>
+                            <div class="form-group"><label for="company">Company</label><input type="text" id="company" placeholder="Company name"></div>
+                            <div class="form-group"><label for="posted-date">Date Posted</label><select id="posted-date"><option>Anytime</option><option>Past 24 hours</option><option>Past week</option><option>Past month</option></select></div>
+                            <div class="form-group"><label>Salary Range</label><input type="range" min="0" max="200000" value="75000"></div>
+                            <div class="form-group"><label for="experience">Experience Level</label><select id="experience"><option>Any</option><option>Entry</option><option>Mid-level</option><option>Senior</option></select></div>
+                            <button type="submit" class="btn btn-primary btn-block">Apply Filters</button>
+                        </form>
+                    </div>
+                </aside>
+
+                <!-- Center Panel: Job List -->
+                <section class="job-list-panel">
+                    <div class="job-list-header">
+                        <h2>Showing 1,234 Jobs</h2>
+                        <!-- Sorting dropdown can go here -->
+                    </div>
+                    <div class="job-list">
+                        <!-- Job Card 1 (Content copied from component) -->
+                        <div class="job-card"><div class="job-card-header"><img src="https://logo.clearbit.com/google.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h3 class="job-title"><a href="job-detail.html">Senior Frontend Developer</a></h3><p class="company-name">Google</p><p class="job-location">Mountain View, CA</p></div></div><div class="job-card-body"><p class="job-description">Design and implement user interfaces for Google's core products, working with a team of talented engineers...</p></div><div class="job-card-footer"><div class="job-tags"><span class="tag">Full-time</span><span class="tag">React</span></div><div class="job-actions"><button class="btn btn-secondary btn-sm">Save</button><button class="btn btn-primary btn-sm">Apply</button></div></div></div>
+                        <!-- Job Card 2 -->
+                        <div class="job-card"><div class="job-card-header"><img src="https://logo.clearbit.com/meta.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h3 class="job-title"><a href="job-detail.html">Full-Stack Engineer</a></h3><p class="company-name">Meta</p><p class="job-location">Menlo Park, CA (Remote)</p></div></div><div class="job-card-body"><p class="job-description">Join the team building the future of social technology. We are looking for a skilled full-stack engineer...</p></div><div class="job-card-footer"><div class="job-tags"><span class="tag">Full-time</span><span class="tag">Python</span></div><div class="job-actions"><button class="btn btn-secondary btn-sm">Save</button><button class="btn btn-primary btn-sm">Apply</button></div></div></div>
+                        <!-- Job Card 3 -->
+                        <div class="job-card"><div class="job-card-header"><img src="https://logo.clearbit.com/netflix.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h3 class="job-title"><a href="job-detail.html">Senior Software Engineer, UI</a></h3><p class="company-name">Netflix</p><p class="job-location">Los Gatos, CA</p></div></div><div class="job-card-body"><p class="job-description">This role focuses on building the user interface for the Netflix application on a wide variety of devices...</p></div><div class="job-card-footer"><div class="job-tags"><span class="tag">Full-time</span><span class="tag">JavaScript</span></div><div class="job-actions"><button class="btn btn-secondary btn-sm">Save</button><button class="btn btn-primary btn-sm">Apply</button></div></div></div>
+                    </div>
+                </section>
+
+                <!-- Right Panel: AI Search -->
+                <aside class="ai-search-panel">
+                    <div class="panel-card">
+                        <h3>AI-Powered Search</h3>
+                        <p>Describe your ideal role, and let our AI find the perfect match for you.</p>
+                        <textarea class="ai-search-textarea" placeholder="e.g., 'A remote senior React developer role at a startup, focusing on design systems...'"></textarea>
+                        <button class="btn btn-primary btn-block">Find My Match</button>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

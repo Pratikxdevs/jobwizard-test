@@ -1,0 +1,43 @@
+<!-- /frontend/components/navbar.html -->
+<!-- This component represents the persistent top navigation bar. -->
+<nav class="navbar">
+    <!-- Left section: Logo and Search Bar -->
+    <div class="navbar-left">
+        <a href="/frontend/pages/dashboard.html" class="navbar-logo">
+            <!-- Placeholder for a proper logo SVG -->
+            <strong>Job Wizard</strong>
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for jobs, companies...">
+            <!-- Placeholder for search icon -->
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <!-- Right section: Actions and User Profile -->
+    <div class="navbar-right">
+        <div class="navbar-item">
+            <a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a>
+        </div>
+        <div class="navbar-item">
+            <a href="/frontend/pages/notifications.html" class="notification-bell">
+                <!-- Using an emoji as a placeholder for the bell icon -->
+                <span class="bell-icon">🔔</span>
+                <span class="notification-badge">3</span> <!-- Placeholder badge -->
+            </a>
+        </div>
+        <div class="profile-dropdown">
+            <img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar">
+            <div class="dropdown-content">
+                <div class="dropdown-header">
+                    <p class="username">John Doe</p>
+                    <p class="email">john.doe@example.com</p>
+                </div>
+                <a href="/frontend/pages/profile.html">Profile</a>
+                <a href="/frontend/pages/settings.html">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a href="/frontend/index.html">Log Out</a>
+            </div>
+        </div>
+    </div>
+</nav>
