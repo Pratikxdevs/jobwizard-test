@@ -1,0 +1,107 @@
+/* /frontend/css/globals.css */
+
+/* ------------------ */
+/*      Variables     */
+/* ------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Official Color Palette */
+    --black: #000000;
+    --night: #111111;
+    --eerie-black: #232323;
+    --jet: #343434;
+    --outer-space: #464646;
+    --davys-gray: #575757;
+    --dim-gray: #696969;
+    --gray: #7a7a7a;
+
+    /* Semantic UI Colors */
+    --primary-color: #4A90E2; /* A professional blue for primary actions */
+    --primary-color-hover: #357ABD;
+    --secondary-color: var(--outer-space);
+    --secondary-color-hover: var(--davys-gray);
+    --background-dark: var(--night);
+    --background-light: var(--eerie-black);
+    --text-light: #FFFFFF;
+    --text-muted: var(--gray);
+    --border-color: var(--jet);
+
+    /* Fonts */
+    --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* ------------------ */
+/*    Global Resets   */
+/* ------------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-primary);
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+
+/* ------------------ */
+/*      Utilities     */
+/* ------------------ */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
