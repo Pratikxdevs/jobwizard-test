@@ -1,0 +1,63 @@
+<!-- /frontend/pages/profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Edit Profile</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar is manually included -->
+        <aside class="sidebar"><nav class="sidebar-nav"><ul><li class="sidebar-item"><a href="/frontend/pages/dashboard.html" class="sidebar-link active"><span class="sidebar-icon">🏠</span><span class="sidebar-text">Dashboard</span></a></li><li class="sidebar-item"><a href="/frontend/pages/jobs.html" class="sidebar-link"><span class="sidebar-icon">💼</span><span class="sidebar-text">Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/saved.html" class="sidebar-link"><span class="sidebar-icon">❤️</span><span class="sidebar-text">Saved Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/applied.html" class="sidebar-link"><span class="sidebar-icon">✅</span><span class="sidebar-text">Applied</span></a></li><li class="sidebar-item"><a href="/frontend/pages/companies.html" class="sidebar-link"><span class="sidebar-icon">🏢</span><span class="sidebar-text">Companies</span></a></li><li class="sidebar-heading">Tools</li><li class="sidebar-item"><a href="/frontend/pages/resume-builder.html" class="sidebar-link"><span class="sidebar-icon">📄</span><span class="sidebar-text">Resume Builder</span></a></li><li class="sidebar-item"><a href="/frontend/pages/email-wizard.html" class="sidebar-link"><span class="sidebar-icon">✉️</span><span class="sidebar-text">Email Wizard</span></a></li><li class="sidebar-heading">Account</li><li class="sidebar-item"><a href="/frontend/pages/profile.html" class="sidebar-link"><span class="sidebar-icon">👤</span><span class="sidebar-text">Profile</span></a></li><li class="sidebar-item"><a href="/frontend/pages/notifications.html" class="sidebar-link"><span class="sidebar-icon">🔔</span><span class="sidebar-text">Notifications</span></a></li><li class="sidebar-item"><a href="/frontend/pages/settings.html" class="sidebar-link"><span class="sidebar-icon">⚙️</span><span class="sidebar-text">Settings</span></a></li></ul></nav></aside>
+
+        <!-- Navbar is manually included -->
+        <nav class="navbar"><div class="navbar-left"><a href="/frontend/pages/dashboard.html" class="navbar-logo"><strong>Job Wizard</strong></a><div class="search-bar"><input type="text" placeholder="Search for jobs, companies..."><span class="search-icon">🔍</span></div></div><div class="navbar-right"><div class="navbar-item"><a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a></div><div class="navbar-item"><a href="/frontend/pages/notifications.html" class="notification-bell"><span class="bell-icon">🔔</span><span class="notification-badge">3</span></a></div><div class="profile-dropdown"><img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar"><div class="dropdown-content"><div class="dropdown-header"><p class="username">John Doe</p><p class="email">john.doe@example.com</p></div><a href="/frontend/pages/profile.html">Profile</a><a href="/frontend/pages/settings.html">Settings</a><div class="dropdown-divider"></div><a href="/frontend/index.html">Log Out</a></div></div></div></nav>
+
+        <main class="main-content">
+            <h1>Edit Profile</h1>
+            <p class="page-subtitle">Keep your profile up to date to get the best job matches.</p>
+
+            <form class="profile-form panel-card" action="dashboard.html" method="get">
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="profile-picture-section">
+                        <img src="https://i.pravatar.cc/100?u=jobwizarduser" alt="User Avatar" id="profile-avatar-preview">
+                        <div class="upload-btn-wrapper">
+                            <button type="button" class="btn btn-secondary">Change Picture</button>
+                            <input type="file" name="avatar" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group"><label for="first-name">First Name</label><input type="text" id="first-name" value="John"></div>
+                        <div class="form-group"><label for="last-name">Last Name</label><input type="text" id="last-name" value="Doe"></div>
+                        <div class="form-group"><label for="location">Location</label><input type="text" id="location" value="San Francisco, CA"></div>
+                        <div class="form-group"><label for="role">Current Role</label><input type="text" id="role" value="Software Engineer"></div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Professional Details</h3>
+                    <div class="form-group"><label for="skills">Skills</label><input type="text" id="skills" placeholder="Add skills separated by commas" value="JavaScript, React, Node.js, CSS, HTML"></div>
+                    <div class="form-group"><label for="experience">Work Experience</label><textarea id="experience" rows="5" placeholder="Describe your work experience..."></textarea></div>
+                    <div class="form-group"><label for="interests">Career Interests</label><textarea id="interests" rows="3" placeholder="What are you looking for in your next role?"></textarea></div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Resume</h3>
+                    <div class="form-group"><label>Current Resume</label><div class="resume-status"><span>my_resume_final_v2.pdf</span><a href="/frontend/pages/resume-builder.html" class="btn btn-secondary btn-sm">Replace</a></div></div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Save & Finish</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

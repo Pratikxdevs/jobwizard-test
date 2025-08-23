@@ -1,0 +1,35 @@
+/* /frontend/css/companies.css */
+
+.companies-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.companies-header h1 {
+    margin: 0;
+}
+
+.companies-header .search-bar input {
+    width: 300px; /* Or adjust as needed */
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .companies-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .companies-header .search-bar input {
+        width: 100%;
+    }
+}

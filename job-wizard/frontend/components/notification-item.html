@@ -1,0 +1,21 @@
+<!-- /frontend/components/notification-item.html -->
+<!-- This is a reusable component for a single notification. -->
+<!-- Add the 'unread' class for unread notifications to the main div. -->
+<div class="notification-item unread">
+    <div class="notification-icon">
+        <!-- Placeholder icon. Can be an img or an emoji span. -->
+        <!-- Example: Job match -->
+        <span>💡</span>
+        <!-- Example: Recruiter message -->
+        <!-- <img src="https://i.pravatar.cc/40?u=recruiter" alt="Recruiter Avatar"> -->
+    </div>
+    <div class="notification-content">
+        <p class="notification-title"><strong>New Job Matches Found</strong></p>
+        <p class="notification-subtext">We found 5 new jobs that match your profile and skills. Check them out!</p>
+    </div>
+    <div class="notification-meta">
+        <span class="notification-timestamp">5m ago</span>
+        <!-- This indicator will be styled in CSS to be visible only on unread items -->
+        <span class="unread-indicator" title="Unread"></span>
+    </div>
+</div>

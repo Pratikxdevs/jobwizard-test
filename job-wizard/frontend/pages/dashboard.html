@@ -12,79 +12,25 @@
 <body>
     <!-- Main application layout -->
     <div class="app-layout">
-        <!-- Sidebar is dynamically loaded into this placeholder -->
-        <div id="sidebar-placeholder"></div>
 
-        <!-- Navbar is dynamically loaded into this placeholder -->
-        <div id="navbar-placeholder"></div>
+        <!-- Sidebar is manually included -->
+        <aside class="sidebar"><nav class="sidebar-nav"><ul><li class="sidebar-item"><a href="/frontend/pages/dashboard.html" class="sidebar-link active"><span class="sidebar-icon">🏠</span><span class="sidebar-text">Dashboard</span></a></li><li class="sidebar-item"><a href="/frontend/pages/jobs.html" class="sidebar-link"><span class="sidebar-icon">💼</span><span class="sidebar-text">Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/saved.html" class="sidebar-link"><span class="sidebar-icon">❤️</span><span class="sidebar-text">Saved Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/applied.html" class="sidebar-link"><span class="sidebar-icon">✅</span><span class="sidebar-text">Applied</span></a></li><li class="sidebar-item"><a href="/frontend/pages/companies.html" class="sidebar-link"><span class="sidebar-icon">🏢</span><span class="sidebar-text">Companies</span></a></li><li class="sidebar-heading">Tools</li><li class="sidebar-item"><a href="/frontend/pages/resume-builder.html" class="sidebar-link"><span class="sidebar-icon">📄</span><span class="sidebar-text">Resume Builder</span></a></li><li class="sidebar-item"><a href="/frontend/pages/email-wizard.html" class="sidebar-link"><span class="sidebar-icon">✉️</span><span class="sidebar-text">Email Wizard</span></a></li><li class="sidebar-heading">Account</li><li class="sidebar-item"><a href="/frontend/pages/profile.html" class="sidebar-link"><span class="sidebar-icon">👤</span><span class="sidebar-text">Profile</span></a></li><li class="sidebar-item"><a href="/frontend/pages/notifications.html" class="sidebar-link"><span class="sidebar-icon">🔔</span><span class="sidebar-text">Notifications</span></a></li><li class="sidebar-item"><a href="/frontend/pages/settings.html" class="sidebar-link"><span class="sidebar-icon">⚙️</span><span class="sidebar-text">Settings</span></a></li></ul></nav></aside>
+
+        <!-- Navbar is manually included -->
+        <nav class="navbar"><div class="navbar-left"><a href="/frontend/pages/dashboard.html" class="navbar-logo"><strong>Job Wizard</strong></a><div class="search-bar"><input type="text" placeholder="Search for jobs, companies..."><span class="search-icon">🔍</span></div></div><div class="navbar-right"><div class="navbar-item"><a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a></div><div class="navbar-item"><a href="/frontend/pages/notifications.html" class="notification-bell"><span class="bell-icon">🔔</span><span class="notification-badge">3</span></a></div><div class="profile-dropdown"><img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar"><div class="dropdown-content"><div class="dropdown-header"><p class="username">John Doe</p><p class="email">john.doe@example.com</p></div><a href="/frontend/pages/profile.html">Profile</a><a href="/frontend/pages/settings.html">Settings</a><div class="dropdown-divider"></div><a href="/frontend/index.html">Log Out</a></div></div></div></nav>
 
         <!-- Main page content for the dashboard -->
         <main class="main-content">
             <h1>Dashboard</h1>
             <div class="dashboard-grid">
-                <!-- Left Column: Profile Summary -->
-                <aside class="dashboard-panel profile-summary">
-                    <div class="panel-card">
-                        <div class="profile-header">
-                            <img src="https://i.pravatar.cc/80?u=jobwizarduser" alt="User Avatar" class="profile-avatar-large">
-                            <h3>John Doe</h3>
-                            <p class="user-title">Software Engineer</p>
-                            <p class="user-location">San Francisco, CA</p>
-                        </div>
-                        <div class="profile-skills">
-                            <h4>Skills</h4>
-                            <div class="skills-tags">
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">React</span>
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">CSS Grid</span>
-                                <span class="skill-tag">Next.js</span>
-                            </div>
-                        </div>
-                        <div class="profile-actions">
-                            <button class="btn btn-secondary btn-block">Preview Resume</button>
-                            <a href="profile.html" class="btn btn-primary btn-block">Edit Profile</a>
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Middle Column: Jobs Section -->
-                <section class="dashboard-panel jobs-section">
-                     <div class="panel-card">
-                        <h2>Start Your Job Search</h2>
-                        <p>Explore thousands of jobs tailored to your profile and skills.</p>
-                        <div class="illustration-placeholder">
-                            <span>🚀</span>
-                        </div>
-                        <a href="jobs.html" class="btn btn-primary btn-block">Explore Jobs</a>
-                    </div>
-                </section>
-
-                <!-- Right Column: Widgets -->
-                <aside class="dashboard-panel widgets">
-                    <div class="panel-card widget-card">
-                        <h4>Application Stats</h4>
-                        <div class="graph-placeholder">[Graph Placeholder]</div>
-                    </div>
-                    <div class="panel-card widget-card">
-                        <h4>Saved Jobs</h4>
-                        <ul class="widget-list">
-                            <li>Senior Frontend Developer @ Google</li>
-                            <li>Full-Stack Engineer @ Meta</li>
-                            <li><a href="saved.html">View all...</a></li>
-                        </ul>
-                    </div>
-                     <div class="panel-card widget-card">
-                        <h4>Applied This Week</h4>
-                        <p class="applied-count">5</p>
-                        <p class="widget-subtitle">applications sent</p>
-                    </div>
-                </aside>
+                <aside class="dashboard-panel profile-summary"><div class="panel-card"><div class="profile-header"><img src="https://i.pravatar.cc/80?u=jobwizarduser" alt="User Avatar" class="profile-avatar-large"><h3>John Doe</h3><p class="user-title">Software Engineer</p><p class="user-location">San Francisco, CA</p></div><div class="profile-skills"><h4>Skills</h4><div class="skills-tags"><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Node.js</span><span class="skill-tag">CSS Grid</span><span class="skill-tag">Next.js</span></div></div><div class="profile-actions"><button class="btn btn-secondary btn-block">Preview Resume</button><a href="profile.html" class="btn btn-primary btn-block">Edit Profile</a></div></div></aside>
+                <section class="dashboard-panel jobs-section"><div class="panel-card"><h2>Start Your Job Search</h2><p>Explore thousands of jobs tailored to your profile and skills.</p><div class="illustration-placeholder"><span>🚀</span></div><a href="jobs.html" class="btn btn-primary btn-block">Explore Jobs</a></div></section>
+                <aside class="dashboard-panel widgets"><div class="panel-card widget-card"><h4>Application Stats</h4><div class="graph-placeholder">[Graph Placeholder]</div></div><div class="panel-card widget-card"><h4>Saved Jobs</h4><ul class="widget-list"><li>Senior Frontend Developer @ Google</li><li>Full-Stack Engineer @ Meta</li><li><a href="saved.html">View all...</a></li></ul></div><div class="panel-card widget-card"><h4>Applied This Week</h4><p class="applied-count">5</p><p class="widget-subtitle">applications sent</p></div></aside>
             </div>
         </main>
     </div>
 
-    <!-- Main script to load components -->
+    <!-- Main script to set active sidebar link -->
     <script src="../js/main.js"></script>
 </body>
 </html>

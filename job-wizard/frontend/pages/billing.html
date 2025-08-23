@@ -1,13 +1,13 @@
-<!-- /frontend/pages/applied.html -->
+<!-- /frontend/pages/billing.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Wizard - Applied Jobs</title>
+    <title>Job Wizard - Billing</title>
     <link rel="stylesheet" href="../css/globals.css">
     <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/collections.css">
+    <link rel="stylesheet" href="../css/billing.css">
 </head>
 <body>
     <div class="app-layout">
@@ -17,15 +17,31 @@
         <!-- Navbar is manually included -->
         <nav class="navbar"><div class="navbar-left"><a href="/frontend/pages/dashboard.html" class="navbar-logo"><strong>Job Wizard</strong></a><div class="search-bar"><input type="text" placeholder="Search for jobs, companies..."><span class="search-icon">🔍</span></div></div><div class="navbar-right"><div class="navbar-item"><a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a></div><div class="navbar-item"><a href="/frontend/pages/notifications.html" class="notification-bell"><span class="bell-icon">🔔</span><span class="notification-badge">3</span></a></div><div class="profile-dropdown"><img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar"><div class="dropdown-content"><div class="dropdown-header"><p class="username">John Doe</p><p class="email">john.doe@example.com</p></div><a href="/frontend/pages/profile.html">Profile</a><a href="/frontend/pages/settings.html">Settings</a><div class="dropdown-divider"></div><a href="/frontend/index.html">Log Out</a></div></div></div></nav>
 
-        <!-- Main page content -->
         <main class="main-content">
-            <h1>My Job Collections</h1>
-            <div class="tabs"><a href="saved.html" class="tab-link">Saved Jobs</a><a href="applied.html" class="tab-link active">Applied Jobs</a></div>
-            <div class="job-list">
-                <!-- Applied Job Card 1 -->
-                <div class="job-card"><div class="job-card-header"><img src="https://logo.clearbit.com/google.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h3 class="job-title"><a href="job-detail.html">Senior Frontend Developer</a></h3><p class="company-name">Google</p><p class="job-location">Mountain View, CA</p></div></div><div class="job-card-body"><p class="job-description">Design and implement user interfaces for Google's core products, working with a team of talented engineers...</p></div><div class="job-card-footer"><div class="job-tags"><span class="tag applied-badge">Applied on Aug 22, 2025</span></div><div class="job-actions"><button class="btn btn-secondary btn-sm">View Application</button></div></div></div>
-                <!-- Applied Job Card 2 -->
-                <div class="job-card"><div class="job-card-header"><img src="https://logo.clearbit.com/meta.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h3 class="job-title"><a href="job-detail.html">Full-Stack Engineer</a></h3><p class="company-name">Meta</p><p class="job-location">Menlo Park, CA (Remote)</p></div></div><div class="job-card-body"><p class="job-description">Join the team building the future of social technology. We are looking for a skilled full-stack engineer...</p></div><div class="job-card-footer"><div class="job-tags"><span class="tag applied-badge">Applied on Aug 20, 2025</span></div><div class="job-actions"><button class="btn btn-secondary btn-sm">View Application</button></div></div></div>
+            <h1>Billing &amp; Subscription</h1>
+            <div class="billing-dashboard">
+                <div class="panel-card current-plan">
+                    <div>
+                        <h3>Current Plan: Pro</h3>
+                        <p class="text-muted">Your plan renews on September 22, 2025.</p>
+                    </div>
+                    <div class="plan-actions">
+                        <button class="btn btn-secondary">Cancel Subscription</button>
+                        <button class="btn btn-primary">Upgrade Plan</button>
+                    </div>
+                </div>
+                <div class="panel-card usage-stats">
+                    <h3>This Month's Usage</h3>
+                    <p class="text-muted">[Placeholder for usage meters/stats]</p>
+                </div>
+                <div class="panel-card payment-history">
+                    <h3>Payment History</h3>
+                    <p class="text-muted">[Placeholder for payment history table]</p>
+                </div>
+                 <div class="panel-card payment-method">
+                    <h3>Payment Method</h3>
+                    <p class="text-muted">[Placeholder for payment method details]</p>
+                </div>
             </div>
         </main>
     </div>

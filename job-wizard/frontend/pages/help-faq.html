@@ -1,0 +1,59 @@
+<!-- /frontend/pages/help-faq.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - FAQ</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/pricing.css"> <!-- Reusing public layout -->
+    <link rel="stylesheet" href="../css/support.css"> <!-- Reusing support styles -->
+</head>
+<body>
+    <header class="public-header">
+        <a href="/frontend/index.html" class="logo"><strong>Job Wizard</strong></a>
+        <nav>
+            <a href="/frontend/pages/login.html">Log In</a>
+            <a href="/frontend/pages/signup.html" class="btn btn-primary">Sign Up</a>
+        </nav>
+    </header>
+
+    <main class="public-main">
+        <div class="faq-page">
+            <div class="faq-header">
+                <h1>Frequently Asked Questions</h1>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question"><span>What is Job Wizard?</span><span>+</span></div>
+                    <div class="faq-answer"><p>Job Wizard is an AI-powered platform designed to automate and streamline your job search process.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Is there a free trial?</span><span>+</span></div>
+                    <div class="faq-answer"><p>Yes, we offer a free plan with basic features to get you started.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>How do I cancel my subscription?</span><span>+</span></div>
+                    <div class="faq-answer"><p>You can cancel your subscription at any time from the 'Billing' page in your account settings.</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="public-footer">
+        <p>&copy; 2025 Job Wizard. All rights reserved.</p>
+    </footer>
+    <script>
+        // Basic accordion toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const questions = document.querySelectorAll('.faq-question');
+            questions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const answer = q.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

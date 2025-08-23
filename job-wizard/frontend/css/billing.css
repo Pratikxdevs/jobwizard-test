@@ -1,0 +1,36 @@
+/* /frontend/css/billing.css */
+
+.billing-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+}
+
+.billing-dashboard > .panel-card {
+    min-height: 200px;
+}
+
+.current-plan {
+    grid-column: 1 / -1; /* Span full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.plan-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .billing-dashboard {
+        grid-template-columns: 1fr;
+    }
+    .current-plan {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

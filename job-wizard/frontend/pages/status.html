@@ -1,0 +1,50 @@
+<!-- /frontend/pages/status.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - System Status</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/pricing.css"> <!-- Reusing pricing page's public layout -->
+    <link rel="stylesheet" href="../css/status.css">
+</head>
+<body>
+    <header class="public-header">
+        <a href="/frontend/index.html" class="logo"><strong>Job Wizard</strong></a>
+        <nav>
+            <a href="/frontend/pages/login.html">Log In</a>
+            <a href="/frontend/pages/signup.html" class="btn btn-primary">Sign Up</a>
+        </nav>
+    </header>
+
+    <main class="public-main">
+        <div class="status-page">
+            <div class="status-header">
+                <h1>System Status</h1>
+            </div>
+
+            <div class="status-card operational">
+                <span class="status-icon">✅</span>
+                <h2>All systems operational</h2>
+            </div>
+
+            <div class="status-history">
+                <h3>Past Incidents</h3>
+                <div class="incident">
+                    <p><strong>Resolved:</strong> Minor API latency issues.</p>
+                    <p class="text-muted">August 21, 2025</p>
+                </div>
+                 <div class="incident">
+                    <p><strong>Resolved:</strong> Scheduled database maintenance.</p>
+                    <p class="text-muted">August 15, 2025</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="public-footer">
+        <p>&copy; 2025 Job Wizard. All rights reserved.</p>
+    </footer>
+</body>
+</html>
