@@ -1,38 +1,38 @@
 // /frontend/js/main.js
+// This script handles the dynamic loading of shared components.
 
-/**
- * This script runs on all authenticated pages and handles shared functionality.
- * Its main role is to handle dynamic UI elements like the active sidebar link.
- * Component loading has been moved to a manual inclusion process to ensure
- * reliability across all environments.
- */
 document.addEventListener('DOMContentLoaded', () => {
 
     /**
-     * Sets the 'active' class on the sidebar link corresponding to the current page.
+     * Fetches an HTML component and loads it into a target element by ID.
+     * This requires the page to be served by a web server, not opened as a file.
+     * @param {string} componentFile - The name of the component file (e.g., 'navbar.html').
+     * @param {string} placeholderId - The ID of the element to load the component into.
      */
-    const setActiveSidebarLink = () => {
-        const currentPagePath = window.location.pathname;
-        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const loadComponent = (componentFile, placeholderId) => {
+        const placeholder = document.getElementById(placeholderId);
+        if (placeholder) {
+            // Assumes pages are in /pages/ and components are in /components/
+            const componentPath = `../components/${componentFile}`;
 
-        sidebarLinks.forEach(link => {
-            // The link's href is an absolute path, so we can get its pathname
-            const linkPath = new URL(link.href, window.location.origin).pathname;
-
-            // Remove 'active' class from any link that might have it by default
-            // (e.g. the one in the component file)
-            link.classList.remove('active');
-
-            // Add 'active' class if the link's path matches the current page's path.
-            if (linkPath === currentPagePath) {
-                link.classList.add('active');
-            }
-        });
+            fetch(componentPath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Network response was not ok for ${componentPath}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    placeholder.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error(`Error loading component ${componentFile}:`, error);
+                    placeholder.innerHTML = `<p style="color: red; text-align: center;">Error loading ${placeholderId}.</p>`;
+                });
+        }
     };
 
-    // Set the active link on page load.
-    // We check if a sidebar exists to avoid running this on unauthenticated pages.
-    if (document.querySelector('.sidebar')) {
-        setActiveSidebarLink();
-    }
+    // Load the persistent components into all authenticated pages.
+    loadComponent('navbar.html', 'navbar-placeholder');
+    loadComponent('sidebar.html', 'sidebar-placeholder');
 });

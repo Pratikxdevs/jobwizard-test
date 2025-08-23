@@ -1,2 +1,0 @@
-This file confirms that the project structure has been well-defined from the start.
-(Placeholder content)
