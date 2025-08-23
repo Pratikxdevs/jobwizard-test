@@ -1,0 +1,53 @@
+<!-- /frontend/pages/email-wizard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Email Wizard</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/email-wizard.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar is manually included -->
+        <aside class="sidebar"><nav class="sidebar-nav"><ul><li class="sidebar-item"><a href="/frontend/pages/dashboard.html" class="sidebar-link active"><span class="sidebar-icon">🏠</span><span class="sidebar-text">Dashboard</span></a></li><li class="sidebar-item"><a href="/frontend/pages/jobs.html" class="sidebar-link"><span class="sidebar-icon">💼</span><span class="sidebar-text">Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/saved.html" class="sidebar-link"><span class="sidebar-icon">❤️</span><span class="sidebar-text">Saved Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/applied.html" class="sidebar-link"><span class="sidebar-icon">✅</span><span class="sidebar-text">Applied</span></a></li><li class="sidebar-item"><a href="/frontend/pages/companies.html" class="sidebar-link"><span class="sidebar-icon">🏢</span><span class="sidebar-text">Companies</span></a></li><li class="sidebar-heading">Tools</li><li class="sidebar-item"><a href="/frontend/pages/resume-builder.html" class="sidebar-link"><span class="sidebar-icon">📄</span><span class="sidebar-text">Resume Builder</span></a></li><li class="sidebar-item"><a href="/frontend/pages/email-wizard.html" class="sidebar-link"><span class="sidebar-icon">✉️</span><span class="sidebar-text">Email Wizard</span></a></li><li class="sidebar-heading">Account</li><li class="sidebar-item"><a href="/frontend/pages/profile.html" class="sidebar-link"><span class="sidebar-icon">👤</span><span class="sidebar-text">Profile</span></a></li><li class="sidebar-item"><a href="/frontend/pages/notifications.html" class="sidebar-link"><span class="sidebar-icon">🔔</span><span class="sidebar-text">Notifications</span></a></li><li class="sidebar-item"><a href="/frontend/pages/settings.html" class="sidebar-link"><span class="sidebar-icon">⚙️</span><span class="sidebar-text">Settings</span></a></li></ul></nav></aside>
+
+        <!-- Navbar is manually included -->
+        <nav class="navbar"><div class="navbar-left"><a href="/frontend/pages/dashboard.html" class="navbar-logo"><strong>Job Wizard</strong></a><div class="search-bar"><input type="text" placeholder="Search for jobs, companies..."><span class="search-icon">🔍</span></div></div><div class="navbar-right"><div class="navbar-item"><a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a></div><div class="navbar-item"><a href="/frontend/pages/notifications.html" class="notification-bell"><span class="bell-icon">🔔</span><span class="notification-badge">3</span></a></div><div class="profile-dropdown"><img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar"><div class="dropdown-content"><div class="dropdown-header"><p class="username">John Doe</p><p class="email">john.doe@example.com</p></div><a href="/frontend/pages/profile.html">Profile</a><a href="/frontend/pages/settings.html">Settings</a><div class="dropdown-divider"></div><a href="/frontend/index.html">Log Out</a></div></div></div></nav>
+
+        <main class="main-content">
+            <h1>AI Email Wizard</h1>
+            <p class="page-subtitle">Generate professional cold emails to recruiters in seconds.</p>
+
+            <div class="email-wizard-layout">
+                <div class="form-panel panel-card">
+                    <h3>Email Details</h3>
+                    <form id="email-wizard-form">
+                        <div class="form-group"><label for="job-title">Job Title</label><input type="text" id="job-title" placeholder="e.g., Senior Frontend Developer"></div>
+                        <div class="form-group"><label for="company-name">Company Name</label><input type="text" id="company-name" placeholder="e.g., Google"></div>
+                        <div class="form-group"><label for="recruiter-name">Recruiter Name (Optional)</label><input type="text" id="recruiter-name" placeholder="e.g., Jane Doe"></div>
+                        <div class="form-group"><label for="custom-message">Key Points to Include</label><textarea id="custom-message" rows="5" placeholder="Mention your experience with React, your passion for their product, etc."></textarea></div>
+                        <button type="button" class="btn btn-primary btn-block">Generate Email</button>
+                    </form>
+                </div>
+                <div class="preview-panel panel-card">
+                    <h3>Generated Email Preview</h3>
+                    <div class="email-preview">
+                        <p><strong>Subject:</strong> Interested in the Senior Frontend Developer Role</p>
+                        <br>
+                        <p>Dear [Recruiter Name],</p>
+                        <p>I hope this email finds you well. I am writing to express my strong interest in the Senior Frontend Developer position at [Company Name].</p>
+                        <p>With my extensive experience in building modern web applications with React, I am confident I have the skills you are looking for. I am particularly impressed by [Company Name]'s work in its industry, and my passion for your product would make me a great fit for your team.</p>
+                        <p>Thank you for your time and consideration. My resume is attached for your review.</p>
+                        <br>
+                        <p>Sincerely,<br>John Doe</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

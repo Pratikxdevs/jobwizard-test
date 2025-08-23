@@ -1,0 +1,52 @@
+<!-- /frontend/pages/company-detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Company: Google</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/company-detail.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar is manually included -->
+        <aside class="sidebar"><nav class="sidebar-nav"><ul><li class="sidebar-item"><a href="/frontend/pages/dashboard.html" class="sidebar-link active"><span class="sidebar-icon">🏠</span><span class="sidebar-text">Dashboard</span></a></li><li class="sidebar-item"><a href="/frontend/pages/jobs.html" class="sidebar-link"><span class="sidebar-icon">💼</span><span class="sidebar-text">Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/saved.html" class="sidebar-link"><span class="sidebar-icon">❤️</span><span class="sidebar-text">Saved Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/applied.html" class="sidebar-link"><span class="sidebar-icon">✅</span><span class="sidebar-text">Applied</span></a></li><li class="sidebar-item"><a href="/frontend/pages/companies.html" class="sidebar-link"><span class="sidebar-icon">🏢</span><span class="sidebar-text">Companies</span></a></li><li class="sidebar-heading">Tools</li><li class="sidebar-item"><a href="/frontend/pages/resume-builder.html" class="sidebar-link"><span class="sidebar-icon">📄</span><span class="sidebar-text">Resume Builder</span></a></li><li class="sidebar-item"><a href="/frontend/pages/email-wizard.html" class="sidebar-link"><span class="sidebar-icon">✉️</span><span class="sidebar-text">Email Wizard</span></a></li><li class="sidebar-heading">Account</li><li class="sidebar-item"><a href="/frontend/pages/profile.html" class="sidebar-link"><span class="sidebar-icon">👤</span><span class="sidebar-text">Profile</span></a></li><li class="sidebar-item"><a href="/frontend/pages/notifications.html" class="sidebar-link"><span class="sidebar-icon">🔔</span><span class="sidebar-text">Notifications</span></a></li><li class="sidebar-item"><a href="/frontend/pages/settings.html" class="sidebar-link"><span class="sidebar-icon">⚙️</span><span class="sidebar-text">Settings</span></a></li></ul></nav></aside>
+
+        <!-- Navbar is manually included -->
+        <nav class="navbar"><div class="navbar-left"><a href="/frontend/pages/dashboard.html" class="navbar-logo"><strong>Job Wizard</strong></a><div class="search-bar"><input type="text" placeholder="Search for jobs, companies..."><span class="search-icon">🔍</span></div></div><div class="navbar-right"><div class="navbar-item"><a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a></div><div class="navbar-item"><a href="/frontend/pages/notifications.html" class="notification-bell"><span class="bell-icon">🔔</span><span class="notification-badge">3</span></a></div><div class="profile-dropdown"><img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar"><div class="dropdown-content"><div class="dropdown-header"><p class="username">John Doe</p><p class="email">john.doe@example.com</p></div><a href="/frontend/pages/profile.html">Profile</a><a href="/frontend/pages/settings.html">Settings</a><div class="dropdown-divider"></div><a href="/frontend/index.html">Log Out</a></div></div></div></nav>
+
+        <main class="main-content">
+            <div class="company-detail-header panel-card">
+                <img src="https://logo.clearbit.com/google.com" alt="Company Logo" class="company-logo-large">
+                <div class="company-header-info">
+                    <h1>Google</h1>
+                    <p>Technology ・ Mountain View, CA</p>
+                </div>
+                <div class="company-header-actions">
+                    <button class="btn btn-secondary">Save Company</button>
+                </div>
+            </div>
+
+            <div class="company-detail-body">
+                <div class="company-description-section panel-card">
+                    <h2>About Google</h2>
+                    <p>Google LLC is an American multinational technology company that focuses on artificial intelligence, search engine technology, online advertising, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics. It has been referred to as the "most powerful company in the world" and one of the world's most valuable brands due to its market dominance, data collection, and technological advantages in the field of artificial intelligence.</p>
+                </div>
+
+                <div class="open-roles-section">
+                    <h2>Open Roles (25)</h2>
+                    <div class="job-list">
+                        <!-- Job Card 1 -->
+                        <div class="job-card"><div class="job-card-header"><img src="https://logo.clearbit.com/google.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h3 class="job-title"><a href="job-detail.html">Senior Frontend Developer</a></h3><p class="company-name">Google</p><p class="job-location">Mountain View, CA</p></div></div><div class="job-card-body"><p class="job-description">Design and implement user interfaces for Google's core products...</p></div><div class="job-card-footer"><div class="job-tags"><span class="tag">Full-time</span></div><div class="job-actions"><button class="btn btn-secondary btn-sm">Save</button><button class="btn btn-primary btn-sm">Apply</button></div></div></div>
+                        <!-- Job Card 2 -->
+                        <div class="job-card"><div class="job-card-header"><img src="https://logo.clearbit.com/google.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h3 class="job-title"><a href="job-detail.html">AI Research Scientist</a></h3><p class="company-name">Google</p><p class="job-location">Remote</p></div></div><div class="job-card-body"><p class="job-description">Work on fundamental problems in artificial intelligence...</p></div><div class="job-card-footer"><div class="job-tags"><span class="tag">Full-time</span></div><div class="job-actions"><button class="btn btn-secondary btn-sm">Save</button><button class="btn btn-primary btn-sm">Apply</button></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

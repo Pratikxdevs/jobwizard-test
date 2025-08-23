@@ -11,82 +11,25 @@
 </head>
 <body>
     <div class="app-layout">
-        <!-- Sidebar placeholder -->
-        <div id="sidebar-placeholder"></div>
+        <!-- Sidebar is manually included -->
+        <aside class="sidebar"><nav class="sidebar-nav"><ul><li class="sidebar-item"><a href="/frontend/pages/dashboard.html" class="sidebar-link active"><span class="sidebar-icon">🏠</span><span class="sidebar-text">Dashboard</span></a></li><li class="sidebar-item"><a href="/frontend/pages/jobs.html" class="sidebar-link"><span class="sidebar-icon">💼</span><span class="sidebar-text">Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/saved.html" class="sidebar-link"><span class="sidebar-icon">❤️</span><span class="sidebar-text">Saved Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/applied.html" class="sidebar-link"><span class="sidebar-icon">✅</span><span class="sidebar-text">Applied</span></a></li><li class="sidebar-item"><a href="/frontend/pages/companies.html" class="sidebar-link"><span class="sidebar-icon">🏢</span><span class="sidebar-text">Companies</span></a></li><li class="sidebar-heading">Tools</li><li class="sidebar-item"><a href="/frontend/pages/resume-builder.html" class="sidebar-link"><span class="sidebar-icon">📄</span><span class="sidebar-text">Resume Builder</span></a></li><li class="sidebar-item"><a href="/frontend/pages/email-wizard.html" class="sidebar-link"><span class="sidebar-icon">✉️</span><span class="sidebar-text">Email Wizard</span></a></li><li class="sidebar-heading">Account</li><li class="sidebar-item"><a href="/frontend/pages/profile.html" class="sidebar-link"><span class="sidebar-icon">👤</span><span class="sidebar-text">Profile</span></a></li><li class="sidebar-item"><a href="/frontend/pages/notifications.html" class="sidebar-link"><span class="sidebar-icon">🔔</span><span class="sidebar-text">Notifications</span></a></li><li class="sidebar-item"><a href="/frontend/pages/settings.html" class="sidebar-link"><span class="sidebar-icon">⚙️</span><span class="sidebar-text">Settings</span></a></li></ul></nav></aside>
 
-        <!-- Navbar placeholder -->
-        <div id="navbar-placeholder"></div>
+        <!-- Navbar is manually included -->
+        <nav class="navbar"><div class="navbar-left"><a href="/frontend/pages/dashboard.html" class="navbar-logo"><strong>Job Wizard</strong></a><div class="search-bar"><input type="text" placeholder="Search for jobs, companies..."><span class="search-icon">🔍</span></div></div><div class="navbar-right"><div class="navbar-item"><a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a></div><div class="navbar-item"><a href="/frontend/pages/notifications.html" class="notification-bell"><span class="bell-icon">🔔</span><span class="notification-badge">3</span></a></div><div class="profile-dropdown"><img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar"><div class="dropdown-content"><div class="dropdown-header"><p class="username">John Doe</p><p class="email">john.doe@example.com</p></div><a href="/frontend/pages/profile.html">Profile</a><a href="/frontend/pages/settings.html">Settings</a><div class="dropdown-divider"></div><a href="/frontend/index.html">Log Out</a></div></div></div></nav>
 
         <!-- Main page content -->
         <main class="main-content">
             <div class="job-detail-layout">
                 <!-- Main Content: Job Description -->
                 <div class="job-detail-main">
-                    <header class="job-detail-header">
-                        <img src="https://logo.clearbit.com/google.com" alt="Company Logo" class="company-logo">
-                        <div class="header-info">
-                            <h1>Senior Frontend Developer</h1>
-                            <p>Google ・ Mountain View, CA</p>
-                            <div class="job-tags">
-                                <span class="tag">Full-time</span>
-                                <span class="tag">Remote Option</span>
-                                <span class="tag">Senior</span>
-                            </div>
-                        </div>
-                        <div class="header-actions">
-                            <button class="btn btn-secondary">Save Job</button>
-                            <button class="btn btn-primary">Apply Now</button>
-                        </div>
-                    </header>
-
-                    <div class="job-detail-content panel-card">
-                        <section>
-                            <h2>About the Job</h2>
-                            <p>Google is and always will be an engineering company. We hire people with a broad set of technical skills who are ready to take on some of technology's greatest challenges and make an impact on millions, if not billions, of users. At Google, engineers not only revolutionize search, they routinely work on massive scalability and storage solutions, large-scale applications and entirely new platforms for developers around the world.</p>
-                        </section>
-                        <section>
-                            <h2>Responsibilities</h2>
-                            <ul>
-                                <li>Design, develop, test, deploy, maintain and improve software.</li>
-                                <li>Manage individual project priorities, deadlines and deliverables.</li>
-                                <li>Work with a team of talented engineers to build user interfaces.</li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h2>Qualifications</h2>
-                            <ul>
-                                <li>Bachelor's degree in Computer Science, a related technical field, or equivalent practical experience.</li>
-                                <li>5 years of experience with software development in one or more programming languages.</li>
-                                <li>Experience with React, Angular, or Vue.</li>
-                            </ul>
-                        </section>
-                         <section>
-                            <h2>Benefits</h2>
-                            <ul>
-                                <li>Medical, dental, and vision insurance.</li>
-                                <li>401(k) plan with a company match.</li>
-                                <li>Paid time off and sick leave.</li>
-                            </ul>
-                        </section>
-                    </div>
+                    <header class="job-detail-header"><img src="https://logo.clearbit.com/google.com" alt="Company Logo" class="company-logo"><div class="header-info"><h1>Senior Frontend Developer</h1><p>Google ・ Mountain View, CA</p><div class="job-tags"><span class="tag">Full-time</span><span class="tag">Remote Option</span><span class="tag">Senior</span></div></div><div class="header-actions"><button class="btn btn-secondary">Save Job</button><button class="btn btn-primary">Apply Now</button></div></header>
+                    <div class="job-detail-content panel-card"><section><h2>About the Job</h2><p>Google is and always will be an engineering company. We hire people with a broad set of technical skills who are ready to take on some of technology's greatest challenges and make an impact on millions, if not billions, of users. At Google, engineers not only revolutionize search, they routinely work on massive scalability and storage solutions, large-scale applications and entirely new platforms for developers around the world.</p></section><section><h2>Responsibilities</h2><ul><li>Design, develop, test, deploy, maintain and improve software.</li><li>Manage individual project priorities, deadlines and deliverables.</li><li>Work with a team of talented engineers to build user interfaces.</li></ul></section><section><h2>Qualifications</h2><ul><li>Bachelor's degree in Computer Science, a related technical field, or equivalent practical experience.</li><li>5 years of experience with software development in one or more programming languages.</li><li>Experience with React, Angular, or Vue.</li></ul></section><section><h2>Benefits</h2><ul><li>Medical, dental, and vision insurance.</li><li>401(k) plan with a company match.</li><li>Paid time off and sick leave.</li></ul></section></div>
                 </div>
-
                 <!-- Right Sidebar: Similar Jobs -->
-                <aside class="similar-jobs-panel">
-                    <h3>Similar Jobs</h3>
-                    <div class="similar-jobs-list">
-                        <!-- Compact Job Card 1 -->
-                        <div class="job-card compact"><div class="job-card-header"><img src="https://logo.clearbit.com/meta.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h4 class="job-title"><a href="#">Full-Stack Engineer</a></h4><p class="company-name">Meta</p><p class="job-location">Menlo Park, CA</p></div></div></div>
-                        <!-- Compact Job Card 2 -->
-                        <div class="job-card compact"><div class="job-card-header"><img src="https://logo.clearbit.com/amazon.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h4 class="job-title"><a href="#">Frontend Engineer II</a></h4><p class="company-name">Amazon</p><p class="job-location">Seattle, WA</p></div></div></div>
-                        <!-- Compact Job Card 3 -->
-                        <div class="job-card compact"><div class="job-card-header"><img src="https://logo.clearbit.com/apple.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h4 class="job-title"><a href="#">UI Engineer</a></h4><p class="company-name">Apple</p><p class="job-location">Cupertino, CA</p></div></div></div>
-                    </div>
-                </aside>
+                <aside class="similar-jobs-panel"><h3>Similar Jobs</h3><div class="similar-jobs-list"><div class="job-card compact"><div class="job-card-header"><img src="https://logo.clearbit.com/meta.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h4 class="job-title"><a href="#">Full-Stack Engineer</a></h4><p class="company-name">Meta</p><p class="job-location">Menlo Park, CA</p></div></div></div><div class="job-card compact"><div class="job-card-header"><img src="https://logo.clearbit.com/amazon.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h4 class="job-title"><a href="#">Frontend Engineer II</a></h4><p class="company-name">Amazon</p><p class="job-location">Seattle, WA</p></div></div></div><div class="job-card compact"><div class="job-card-header"><img src="https://logo.clearbit.com/apple.com" alt="Company Logo" class="company-logo"><div class="job-card-title-group"><h4 class="job-title"><a href="#">UI Engineer</a></h4><p class="company-name">Apple</p><p class="job-location">Cupertino, CA</p></div></div></div></div></aside>
             </div>
         </main>
     </div>
-
     <script src="../js/main.js"></script>
 </body>
 </html>

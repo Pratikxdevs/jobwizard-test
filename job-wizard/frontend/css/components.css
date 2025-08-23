@@ -273,3 +273,159 @@
     padding: 8px 16px;
     font-size: 0.875rem;
 }
+
+
+/* ------------------ */
+/* Notification Item  */
+/* ------------------ */
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    border-left: 3px solid transparent; /* For unread state */
+}
+
+.notification-item:hover {
+    background-color: var(--jet);
+}
+
+.notification-item.unread {
+    background-color: var(--jet); /* Give unread items a slightly different background */
+    border-left-color: var(--primary-color);
+}
+
+.notification-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--outer-space);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.notification-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: 600;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.notification-subtext {
+    color: var(--text-muted);
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+}
+
+.notification-meta {
+    text-align: right;
+}
+
+.notification-timestamp {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.unread-indicator {
+    display: none; /* Hidden by default */
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    margin-left: auto;
+}
+
+.notification-item.unread .unread-indicator {
+    display: block; /* Visible only on unread items */
+}
+
+
+/* ------------------ */
+/*    Company Card    */
+/* ------------------ */
+
+.company-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.company-card:hover {
+    border-color: var(--davys-gray);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.company-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.company-logo-large {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: white;
+    border: 1px solid var(--border-color);
+}
+
+.company-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.job-count {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.company-card-body {
+    flex-grow: 1; /* Allows footer to be at the bottom */
+    padding: 1rem 0;
+}
+
+.company-description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.company-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.company-card-footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding-top: 1rem;
+}

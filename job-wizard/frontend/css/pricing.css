@@ -1,0 +1,116 @@
+/* /frontend/css/pricing.css */
+
+/* Public Page Styles */
+.public-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--background-light);
+    border-bottom: 1px solid var(--border-color);
+}
+.public-header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+.public-header .logo:hover {
+    text-decoration: none;
+}
+.public-header nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.public-main {
+    padding: 4rem 2rem;
+}
+
+.public-footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Pricing Page Specifics */
+.pricing-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.pricing-header h1 {
+    font-size: 2.5rem;
+}
+.pricing-header .page-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pricing-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.featured {
+    border-color: var(--primary-color);
+    border-width: 2px;
+    position: relative;
+    overflow: hidden;
+}
+.featured-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: -45px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 3rem;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+}
+.pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+.pricing-card .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.features-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    flex-grow: 1;
+}
+.features-list li {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}

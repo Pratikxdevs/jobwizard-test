@@ -1,0 +1,48 @@
+<!-- /frontend/pages/settings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Settings</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar is manually included -->
+        <aside class="sidebar"><nav class="sidebar-nav"><ul><li class="sidebar-item"><a href="/frontend/pages/dashboard.html" class="sidebar-link active"><span class="sidebar-icon">🏠</span><span class="sidebar-text">Dashboard</span></a></li><li class="sidebar-item"><a href="/frontend/pages/jobs.html" class="sidebar-link"><span class="sidebar-icon">💼</span><span class="sidebar-text">Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/saved.html" class="sidebar-link"><span class="sidebar-icon">❤️</span><span class="sidebar-text">Saved Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/applied.html" class="sidebar-link"><span class="sidebar-icon">✅</span><span class="sidebar-text">Applied</span></a></li><li class="sidebar-item"><a href="/frontend/pages/companies.html" class="sidebar-link"><span class="sidebar-icon">🏢</span><span class="sidebar-text">Companies</span></a></li><li class="sidebar-heading">Tools</li><li class="sidebar-item"><a href="/frontend/pages/resume-builder.html" class="sidebar-link"><span class="sidebar-icon">📄</span><span class="sidebar-text">Resume Builder</span></a></li><li class="sidebar-item"><a href="/frontend/pages/email-wizard.html" class="sidebar-link"><span class="sidebar-icon">✉️</span><span class="sidebar-text">Email Wizard</span></a></li><li class="sidebar-heading">Account</li><li class="sidebar-item"><a href="/frontend/pages/profile.html" class="sidebar-link"><span class="sidebar-icon">👤</span><span class="sidebar-text">Profile</span></a></li><li class="sidebar-item"><a href="/frontend/pages/notifications.html" class="sidebar-link"><span class="sidebar-icon">🔔</span><span class="sidebar-text">Notifications</span></a></li><li class="sidebar-item"><a href="/frontend/pages/settings.html" class="sidebar-link"><span class="sidebar-icon">⚙️</span><span class="sidebar-text">Settings</span></a></li></ul></nav></aside>
+
+        <!-- Navbar is manually included -->
+        <nav class="navbar"><div class="navbar-left"><a href="/frontend/pages/dashboard.html" class="navbar-logo"><strong>Job Wizard</strong></a><div class="search-bar"><input type="text" placeholder="Search for jobs, companies..."><span class="search-icon">🔍</span></div></div><div class="navbar-right"><div class="navbar-item"><a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a></div><div class="navbar-item"><a href="/frontend/pages/notifications.html" class="notification-bell"><span class="bell-icon">🔔</span><span class="notification-badge">3</span></a></div><div class="profile-dropdown"><img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar"><div class="dropdown-content"><div class="dropdown-header"><p class="username">John Doe</p><p class="email">john.doe@example.com</p></div><a href="/frontend/pages/profile.html">Profile</a><a href="/frontend/pages/settings.html">Settings</a><div class="dropdown-divider"></div><a href="/frontend/index.html">Log Out</a></div></div></div></nav>
+
+        <main class="main-content">
+            <h1>Settings</h1>
+            <div class="settings-layout">
+                <aside class="settings-sidebar">
+                    <nav>
+                        <a href="#account" class="settings-menu-item active" data-target="account">Account</a>
+                        <a href="#notifications" class="settings-menu-item" data-target="notifications">Notifications</a>
+                        <a href="#privacy" class="settings-menu-item" data-target="privacy">Privacy</a>
+                        <a href="#integrations" class="settings-menu-item" data-target="integrations">Integrations</a>
+                        <a href="#theme" class="settings-menu-item" data-target="theme">Theme</a>
+                        <a href="#danger-zone" class="settings-menu-item" data-target="danger-zone">Danger Zone</a>
+                    </nav>
+                </aside>
+
+                <div class="settings-content">
+                    <div id="account" class="settings-panel active"><h2>Account Settings</h2><p>Manage your personal and account information.</p></div>
+                    <div id="notifications" class="settings-panel"><h2>Notification Preferences</h2><p>Choose how you want to be notified.</p></div>
+                    <div id="privacy" class="settings-panel"><h2>Privacy Controls</h2><p>Control your profile's visibility and data settings.</p></div>
+                    <div id="integrations" class="settings-panel"><h2>App Integrations</h2><p>Connect your other accounts to Job Wizard.</p></div>
+                    <div id="theme" class="settings-panel"><h2>Theme</h2><p>Customize the look and feel of the app.</p></div>
+                    <div id="danger-zone" class="settings-panel"><h2>Danger Zone</h2><div class="danger-zone-box"><h4>Delete this account</h4><p>Once you delete your account, there is no going back. Please be certain.</p><button class="btn btn-danger">Delete Account</button></div></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/settings.js"></script>
+</body>
+</html>

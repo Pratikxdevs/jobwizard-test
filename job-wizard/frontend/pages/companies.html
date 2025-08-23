@@ -1,0 +1,41 @@
+<!-- /frontend/pages/companies.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Wizard - Companies</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/companies.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar is manually included -->
+        <aside class="sidebar"><nav class="sidebar-nav"><ul><li class="sidebar-item"><a href="/frontend/pages/dashboard.html" class="sidebar-link active"><span class="sidebar-icon">🏠</span><span class="sidebar-text">Dashboard</span></a></li><li class="sidebar-item"><a href="/frontend/pages/jobs.html" class="sidebar-link"><span class="sidebar-icon">💼</span><span class="sidebar-text">Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/saved.html" class="sidebar-link"><span class="sidebar-icon">❤️</span><span class="sidebar-text">Saved Jobs</span></a></li><li class="sidebar-item"><a href="/frontend/pages/applied.html" class="sidebar-link"><span class="sidebar-icon">✅</span><span class="sidebar-text">Applied</span></a></li><li class="sidebar-item"><a href="/frontend/pages/companies.html" class="sidebar-link"><span class="sidebar-icon">🏢</span><span class="sidebar-text">Companies</span></a></li><li class="sidebar-heading">Tools</li><li class="sidebar-item"><a href="/frontend/pages/resume-builder.html" class="sidebar-link"><span class="sidebar-icon">📄</span><span class="sidebar-text">Resume Builder</span></a></li><li class="sidebar-item"><a href="/frontend/pages/email-wizard.html" class="sidebar-link"><span class="sidebar-icon">✉️</span><span class="sidebar-text">Email Wizard</span></a></li><li class="sidebar-heading">Account</li><li class="sidebar-item"><a href="/frontend/pages/profile.html" class="sidebar-link"><span class="sidebar-icon">👤</span><span class="sidebar-text">Profile</span></a></li><li class="sidebar-item"><a href="/frontend/pages/notifications.html" class="sidebar-link"><span class="sidebar-icon">🔔</span><span class="sidebar-text">Notifications</span></a></li><li class="sidebar-item"><a href="/frontend/pages/settings.html" class="sidebar-link"><span class="sidebar-icon">⚙️</span><span class="sidebar-text">Settings</span></a></li></ul></nav></aside>
+
+        <!-- Navbar is manually included -->
+        <nav class="navbar"><div class="navbar-left"><a href="/frontend/pages/dashboard.html" class="navbar-logo"><strong>Job Wizard</strong></a><div class="search-bar"><input type="text" placeholder="Search for jobs, companies..."><span class="search-icon">🔍</span></div></div><div class="navbar-right"><div class="navbar-item"><a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a></div><div class="navbar-item"><a href="/frontend/pages/notifications.html" class="notification-bell"><span class="bell-icon">🔔</span><span class="notification-badge">3</span></a></div><div class="profile-dropdown"><img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar"><div class="dropdown-content"><div class="dropdown-header"><p class="username">John Doe</p><p class="email">john.doe@example.com</p></div><a href="/frontend/pages/profile.html">Profile</a><a href="/frontend/pages/settings.html">Settings</a><div class="dropdown-divider"></div><a href="/frontend/index.html">Log Out</a></div></div></div></nav>
+
+        <main class="main-content">
+            <div class="companies-header">
+                <h1>Companies</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for a company...">
+                </div>
+            </div>
+
+            <div class="company-grid">
+                <!-- Company Card 1 -->
+                <div class="company-card"><div class="company-card-header"><img src="https://logo.clearbit.com/google.com" alt="Company Logo" class="company-logo-large"><div class="company-info"><h3 class="company-name">Google</h3><p class="job-count">25 open positions</p></div></div><div class="company-card-body"><p class="company-description">A multinational technology company that specializes in Internet-related services and products.</p><div class="company-tags"><span class="tag">Technology</span><span class="tag">Search</span><span class="tag">AI</span></div></div><div class="company-card-footer"><a href="/frontend/pages/company-detail.html" class="btn btn-secondary btn-sm">View Company</a></div></div>
+                <!-- Company Card 2 -->
+                <div class="company-card"><div class="company-card-header"><img src="https://logo.clearbit.com/meta.com" alt="Company Logo" class="company-logo-large"><div class="company-info"><h3 class="company-name">Meta</h3><p class="job-count">18 open positions</p></div></div><div class="company-card-body"><p class="company-description">A social technology company that enables people to connect, find communities, and grow businesses.</p><div class="company-tags"><span class="tag">Social Media</span><span class="tag">VR</span></div></div><div class="company-card-footer"><a href="/frontend/pages/company-detail.html" class="btn btn-secondary btn-sm">View Company</a></div></div>
+                <!-- Company Card 3 -->
+                <div class="company-card"><div class="company-card-header"><img src="https://logo.clearbit.com/apple.com" alt="Company Logo" class="company-logo-large"><div class="company-info"><h3 class="company-name">Apple</h3><p class="job-count">42 open positions</p></div></div><div class="company-card-body"><p class="company-description">Designs, develops, and sells consumer electronics, computer software, and online services.</p><div class="company-tags"><span class="tag">Hardware</span><span class="tag">Software</span></div></div><div class="company-card-footer"><a href="/frontend/pages/company-detail.html" class="btn btn-secondary btn-sm">View Company</a></div></div>
+                <!-- Add more company cards as needed -->
+            </div>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>
