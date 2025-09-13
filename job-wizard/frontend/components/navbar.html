@@ -1,42 +1,52 @@
 <!-- /frontend/components/navbar.html -->
-<!-- This component represents the persistent top navigation bar. -->
-<nav class="navbar">
-    <!-- Left section: Logo and Search Bar -->
-    <div class="navbar-left">
-        <a href="/frontend/pages/dashboard.html" class="navbar-logo">
+<nav class="top-navbar">
+    <!-- Left Zone: Logo -->
+    <div class="navbar-zone left">
+        <a href="/frontend/pages/dashboard.html" class="logo-link">
             <!-- Placeholder for a proper logo SVG -->
             <strong>Job Wizard</strong>
         </a>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for jobs, companies...">
-            <!-- Placeholder for search icon -->
-            <span class="search-icon">🔍</span>
+    </div>
+
+    <!-- Center Zone: Navigation Menus -->
+    <div class="navbar-zone center">
+        <div class="nav-menu-item dropdown-container">
+            <button class="nav-button" data-dropdown="tools-dropdown">Tools</button>
+            <div id="tools-dropdown" class="dropdown-menu">
+                <a href="/frontend/pages/email-wizard.html">AI Email Wizard</a>
+                <a href="/frontend/pages/resume-builder.html">Resume Builder</a>
+            </div>
+        </div>
+        <div class="nav-menu-item dropdown-container">
+            <button class="nav-button" data-dropdown="docs-dropdown">Docs</button>
+            <div id="docs-dropdown" class="dropdown-menu">
+                <a href="/frontend/pages/help-faq.html">FAQ</a>
+                <a href="/frontend/pages/support.html">Contact Support</a>
+                <a href="/frontend/pages/legal-terms.html">Terms of Service</a>
+            </div>
         </div>
     </div>
 
-    <!-- Right section: Actions and User Profile -->
-    <div class="navbar-right">
-        <div class="navbar-item">
-            <a href="/frontend/pages/email-wizard.html" class="btn btn-secondary">Email Wizard</a>
+    <!-- Right Zone: Notifications & Profile -->
+    <div class="navbar-zone right">
+        <div class="nav-menu-item">
+            <button class="nav-button icon-button" aria-label="Notifications">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/>
+                </svg>
+                <span class="notification-badge">9+</span>
+            </button>
         </div>
-        <div class="navbar-item">
-            <a href="/frontend/pages/notifications.html" class="notification-bell">
-                <!-- Using an emoji as a placeholder for the bell icon -->
-                <span class="bell-icon">🔔</span>
-                <span class="notification-badge">3</span> <!-- Placeholder badge -->
-            </a>
-        </div>
-        <div class="profile-dropdown">
-            <img src="https://i.pravatar.cc/40?u=jobwizarduser" alt="User Avatar" class="profile-avatar">
-            <div class="dropdown-content">
-                <div class="dropdown-header">
-                    <p class="username">John Doe</p>
-                    <p class="email">john.doe@example.com</p>
-                </div>
+        <div class="nav-menu-item dropdown-container">
+            <button class="nav-button profile-button" data-dropdown="profile-dropdown">
+                <img src="https://i.pravatar.cc/28?u=jobwizarduser" alt="User Avatar" class="profile-avatar">
+                <span>John</span>
+            </button>
+            <div id="profile-dropdown" class="dropdown-menu">
                 <a href="/frontend/pages/profile.html">Profile</a>
                 <a href="/frontend/pages/settings.html">Settings</a>
                 <div class="dropdown-divider"></div>
-                <a href="/frontend/index.html">Log Out</a>
+                <a href="/frontend/index.html">Logout</a>
             </div>
         </div>
     </div>
