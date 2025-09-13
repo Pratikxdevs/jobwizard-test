@@ -42,7 +42,7 @@
 
 /* -- Form Styles from User -- */
 .form {
-  --background: #e8e8e7;
+  --background: #e8e8e8;
   --input-focus: #2d8cf0;
   --font-color: #323232;
   --font-color-sub: #666;
@@ -112,6 +112,15 @@
     color: var(--font-color);
     margin-bottom: 8px;
     display: block;
+}
+
+.form .form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+.form .form-row .form-group {
+    flex: 1;
 }
 
 .form input {
