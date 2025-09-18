@@ -38,8 +38,8 @@
 /* ------------------ */
 .sidebar {
     grid-area: sidebar;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--background-light);
+    color: var(--text-light);
     height: calc(100vh - 60px);
     width: 60px;
     position: fixed;
@@ -49,12 +49,13 @@
     flex-direction: column;
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 0;
+    border-right: 1px solid var(--border-color);
     transition: width 0.3s ease;
     overflow: hidden;
+    z-index: 200; /* Ensure sidebar is above main content */
 }
 
-.sidebar:hover {
+.sidebar.is-expanded {
     width: 240px;
 }
 
@@ -74,13 +75,13 @@
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--text-light);
     white-space: nowrap;
     transition: background-color 0.3s ease;
 }
 
 .nav-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--secondary-color);
     text-decoration: none;
 }
 a.nav-item:hover {
@@ -100,21 +101,22 @@ a.nav-item:hover {
     pointer-events: none;
 }
 
-.sidebar:hover .nav-text {
+.sidebar.is-expanded .nav-text {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
 }
 
 /* Staggered animation delays */
-.sidebar:hover .sidebar-nav > .nav-item:nth-child(2) .nav-text { transition-delay: 0.4s; }
-.sidebar:hover .sidebar-nav > .nav-item:nth-child(3) .nav-text { transition-delay: 0.45s; }
-.sidebar:hover .sidebar-nav > .nav-item:nth-child(4) .nav-text { transition-delay: 0.5s; }
-.sidebar:hover .sidebar-nav > .dropdown-toggle .nav-text { transition-delay: 0.55s; }
-.sidebar:hover .sidebar-nav > .nav-item:nth-child(7) .nav-text { transition-delay: 0.6s; }
-.sidebar:hover .sidebar-nav > .nav-item:nth-child(8) .nav-text { transition-delay: 0.65s; }
-.sidebar:hover .sidebar-nav > .nav-item:nth-child(9) .nav-text { transition-delay: 0.7s; }
-.sidebar:hover .logout-item .nav-text { transition-delay: 0.5s; }
+.sidebar.is-expanded .sidebar-nav > .nav-item:nth-child(2) .nav-text { transition-delay: 0.1s; }
+.sidebar.is-expanded .sidebar-nav > .nav-item:nth-child(3) .nav-text { transition-delay: 0.15s; }
+.sidebar.is-expanded .sidebar-nav > .nav-item:nth-child(4) .nav-text { transition-delay: 0.2s; }
+.sidebar.is-expanded .sidebar-nav > .dropdown-toggle .nav-text { transition-delay: 0.25s; }
+.sidebar.is-expanded .sidebar-nav > .nav-item:nth-child(7) .nav-text { transition-delay: 0.3s; }
+.sidebar.is-expanded .sidebar-nav > .nav-item:nth-child(8) .nav-text { transition-delay: 0.35s; }
+.sidebar.is-expanded .sidebar-nav > .nav-item:nth-child(9) .nav-text { transition-delay: 0.4s; }
+.sidebar.is-expanded .logout-item .nav-text { transition-delay: 0.45s; }
+
 
 .dropdown-toggle {
     width: 100%;
@@ -133,10 +135,10 @@ a.nav-item:hover {
     transform: translateX(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.sidebar:hover .dropdown-arrow {
+.sidebar.is-expanded .dropdown-arrow {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.55s;
+    transition-delay: 0.25s;
 }
 
 .dropdown-toggle.is-open .dropdown-arrow {
@@ -166,7 +168,7 @@ a.nav-item:hover {
 
 .divider {
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--border-color);
     margin: 10px 0;
 }
 
@@ -179,20 +181,21 @@ a.nav-item:hover {
 }
 
 .logout-item {
-    color: #dc3545;
+    color: #dc3545; /* This color can be themed later if needed */
 }
 
 .logout-item:hover {
     background-color: rgba(220, 53, 69, 0.2);
 }
 
+/* --- Main Content Layout --- */
 .main-content {
     grid-area: main;
-    padding-left: 80px; /* Start with padding for collapsed sidebar */
-    padding-top: 80px; /* Space for fixed navbar */
+    padding-left: 80px; /* Start with padding for collapsed sidebar (60px width + 20px buffer) */
+    padding-top: 80px; /* Space for fixed navbar (60px height + 20px buffer) */
     transition: padding-left 0.3s ease;
 }
 
-.sidebar:hover ~ .main-content {
-    padding-left: 260px; /* Adjust padding when sidebar is expanded */
+body.sidebar-is-expanded .main-content {
+    padding-left: 260px; /* Adjust padding for expanded sidebar (240px width + 20px buffer) */
 }
